@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        uses: lannonbr/issue-label-manager-action@master
+      - uses: lannonbr/issue-label-manager-action@master
       - name: Jest
         uses: stefanoeb/jest-action@1.0.4
