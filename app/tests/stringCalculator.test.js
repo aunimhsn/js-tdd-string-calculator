@@ -80,4 +80,5 @@ describe('string calculator tdd', () => {
         expect(new StringCalculator().add('//[***][%%]\n1***2%%3')).toBe(6);
     });
 
+    // --
 });
