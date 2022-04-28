@@ -10,5 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - uses: lannonbr/issue-label-manager-action@master
+        env:
+          GITHUB_TOKEN: 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
       - name: Jest
         uses: stefanoeb/jest-action@1.0.4
