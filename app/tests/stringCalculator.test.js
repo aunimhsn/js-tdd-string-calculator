@@ -53,7 +53,7 @@ describe('string calculator tdd', () => {
     test('for -1,-3,-5 throws an exception', () => {
         expect(() => (new StringCalculator().add('-1,-3,-5'))).toThrow();
         expect(() => (new StringCalculator().add('-1,-3,-5'))).toThrow(Error);
-        expect(() => (new StringCalculator().add('-1,-3,-5'))).toThrow('Negatives not allowed. [-1,-3,-5]');
+        expect(() => (new StringCalculator().add('-1,-3'))).toThrow('Negatives not allowed. [-1,-3,-5]');
     });
 
     // 7
