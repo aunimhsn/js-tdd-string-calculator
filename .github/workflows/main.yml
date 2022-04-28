@@ -3,13 +3,12 @@ on: [push]
 jobs:
   jest-run:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./app
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Change directory
         run: cd app 
-      - name: Jest
-        uses: stefanoeb/jest-action@1.0.4
+      - name: Install dependencies
+        uses: npm install
+      - name: Run Jest
+        uses: npm run test
