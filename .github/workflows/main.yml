@@ -13,3 +13,5 @@ jobs:
         run: npm install
       - name: Jest
         uses: stefanoeb/jest-action@1.0.4
+        with:
+          jestArgs: ./app
