@@ -11,5 +11,3 @@ jobs:
         uses: actions/checkout@v2.4.2
       - name: Jest
         uses: stefanoeb/jest-action@1.0.4
-        with:
-          jestArgs: ../../app
