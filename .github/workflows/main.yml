@@ -9,6 +9,6 @@ jobs:
       - name: Change directory
         run: cd app 
       - name: Install dependencies
-        uses: npm install
+        run: npm install
       - name: Run Jest
-        uses: npm run test
+        run: npm run test
