@@ -11,10 +11,10 @@ export class StringCalculator {
                 .replaceAll(delimiter, ',')
                 .replaceAll('\n', ',')
                 .split(',')
-                .map(elem => parseInt(elem))
+                .map(Number)
                 .filter(elem => elem <= 1000);
 
-        let negatives = numbers.filter(elem => elem <= 0);
+        let negatives = numbers.filter(elem => elem < 0);
         if (negatives.length > 0) throw Error(`Negatives not allowed. [${negatives.join(',')}]`);
 
         return numbers.reduce((sum, current) => sum + current);
@@ -31,7 +31,7 @@ export class StringCalculator {
 
     deleteDelimiter(str) {
         if (this.hasDelimiter(str))
-            return str.split(/\n(.*)/s)[1]
+            return str.split('\n', 2)[1]
 
         return str;
     }

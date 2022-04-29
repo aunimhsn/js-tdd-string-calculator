@@ -12,10 +12,9 @@ export class StringCalculator {
                 .replaceAll('\n', ',')
                 .split(',')
                 .map(Number)
-                .filter(elem => elem <= 1000);
 
         let negatives = numbers.filter(elem => elem < 0);
-        if (negatives.length > 0) throw Error(`Negatives not allowed. [${negatives.join(',')}]`);
+        if (negatives.length > 0) throw Error(`Negatives not allowed. [${negatives[0]}]`);
 
         return numbers.reduce((sum, current) => sum + current);
     }
@@ -24,18 +23,8 @@ export class StringCalculator {
         return (str.includes('//'));
     }
 
-    // https://stackoverflow.com/questions/1493027/javascript-return-string-between-square-brackets
     getDelimiter(str) {
-        if (this.hasDelimiter(str)) {
-            if (str.includes('['))  {
-                let regex = /\[(.*?)\]/;
-                return str.match(regex)[1];
-            }
-            else 
-                return str.charAt(2);
-        }
-        
-        return ',';
+        return (this.hasDelimiter(str)) ? str.charAt(2) : ',';
     }
 
     deleteDelimiter(str) {
@@ -44,5 +33,6 @@ export class StringCalculator {
 
         return str;
     }
+
 
 }

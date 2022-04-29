@@ -11,7 +11,7 @@ export class StringCalculator {
                 .replaceAll(delimiter, ',')
                 .replaceAll('\n', ',')
                 .split(',')
-                .map(elem => parseInt(elem))
+                .map(Number)
                 .reduce((sum, current) => sum + current);
 
     }
@@ -26,9 +26,14 @@ export class StringCalculator {
 
     deleteDelimiter(str) {
         if (this.hasDelimiter(str))
-            return str.split(/\n(.*)/s)[1]
+            return str.split('\n', 2)[1]
 
         return str;
     }
 
 }
+
+
+// let a = "//;\n1;2";
+
+// console.log(a.charAt(2));
