@@ -1,5 +1,5 @@
 name: Jest CI
-on: [push, merge]
+on: [push]
 jobs:
   jest-run:
     runs-on: ubuntu-latest
