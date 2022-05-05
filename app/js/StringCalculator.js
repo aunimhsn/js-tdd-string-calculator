@@ -48,8 +48,8 @@ export class StringCalculator {
 
 }
 
-let str = '//[ppp]\n1ppp2ppp53';
+let str = '//[ppp][mmm]\n1ppp2ppp53';
 let regex = /\[(.*?)\]/;
-
-// console.log(str.split(regex).filter((elem, key) => (key % 2 !== 0)));
+console.log(str.split(regex));
+console.log(str.split(regex).filter((elem, key) => (key % 2 !== 0)));
 // console.log(str.split('\n', 2));
