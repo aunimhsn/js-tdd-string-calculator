@@ -5,8 +5,8 @@ export class StringCalculator {
         if (! isNaN(str)) return parseInt(str);
 
         return str.replaceAll('\n', ',')
-                    .map(elem => parseInt(elem))
                     .split(',')
+                    .map(elem => parseInt(elem))
                     .reduce((sum, current) => sum + current);
     }
 
